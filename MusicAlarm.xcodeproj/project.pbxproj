@@ -11,6 +11,7 @@
 		9AB9C751299CA46A008C033B /* AlarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9C74F299CA46A008C033B /* AlarmTableViewCell.swift */; };
 		9AB9C752299CA46A008C033B /* AlarmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AB9C750299CA46A008C033B /* AlarmTableViewCell.xib */; };
 		9AB9C754299CAD31008C033B /* UNNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9C753299CAD31008C033B /* UNNotificationCenter.swift */; };
+		9AB9C756299E2941008C033B /* BookInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9C755299E2941008C033B /* BookInformation.swift */; };
 		9AF8ECA8299C8C95008F6E52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF8ECA7299C8C95008F6E52 /* AppDelegate.swift */; };
 		9AF8ECAA299C8C95008F6E52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF8ECA9299C8C95008F6E52 /* SceneDelegate.swift */; };
 		9AF8ECAF299C8C95008F6E52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AF8ECAD299C8C95008F6E52 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		9AB9C74F299CA46A008C033B /* AlarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTableViewCell.swift; sourceTree = "<group>"; };
 		9AB9C750299CA46A008C033B /* AlarmTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmTableViewCell.xib; sourceTree = "<group>"; };
 		9AB9C753299CAD31008C033B /* UNNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNNotificationCenter.swift; sourceTree = "<group>"; };
+		9AB9C755299E2941008C033B /* BookInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInformation.swift; sourceTree = "<group>"; };
 		9AF8ECA4299C8C95008F6E52 /* MusicAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF8ECA7299C8C95008F6E52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AF8ECA9299C8C95008F6E52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				9AB9C74F299CA46A008C033B /* AlarmTableViewCell.swift */,
 				9AB9C750299CA46A008C033B /* AlarmTableViewCell.xib */,
 				9AB9C753299CAD31008C033B /* UNNotificationCenter.swift */,
+				9AB9C755299E2941008C033B /* BookInformation.swift */,
 			);
 			path = MusicAlarm;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AF8ECBE299C9A5A008F6E52 /* AddAlarmViewController.swift in Sources */,
+				9AB9C756299E2941008C033B /* BookInformation.swift in Sources */,
 				9AF8ECA8299C8C95008F6E52 /* AppDelegate.swift in Sources */,
 				9AB9C74A299C9ED5008C033B /* Alarm.swift in Sources */,
 				9AF8ECBC299C8F54008F6E52 /* AlarmListViewController.swift in Sources */,

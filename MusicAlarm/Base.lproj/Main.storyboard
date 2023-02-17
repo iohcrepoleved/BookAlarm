@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--🎧-->
+        <!--📚-->
         <scene sceneID="gik-3B-p5Q">
             <objects>
                 <tableViewController id="7X7-gf-d9e" customClass="AlarmListViewController" customModule="MusicAlarm" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,7 @@
                             <outlet property="delegate" destination="7X7-gf-d9e" id="LX1-pK-a2c"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="🎧" id="Mk9-0C-ppb">
+                    <navigationItem key="navigationItem" title="📚" id="Mk9-0C-ppb">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="Gk9-K8-S5a">
                             <connections>
                                 <action selector="tapAddAlarmButton:" destination="7X7-gf-d9e" id="etO-mt-VyY"/>
@@ -51,9 +51,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oc5-P0-m1F">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oc5-P0-m1F">
                                 <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="알람 편집" id="Sr8-mU-215">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="5II-pv-tjE">
@@ -69,28 +68,60 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="bDy-EV-rCi">
-                                <rect key="frame" x="30" y="300" width="393" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <datePicker contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="bDy-EV-rCi">
+                                <rect key="frame" x="0.0" y="143" width="393" height="216"/>
                             </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Hfs-P2-apO">
+                                <rect key="frame" x="20" y="399" width="353" height="34"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="AFx-mp-jcs">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="키워드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJz-P3-xtH">
+                                                <rect key="frame" x="0.0" y="0.0" width="236.66666666666666" height="34"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uH8-5k-xYc">
+                                                <rect key="frame" x="236.66666666666671" y="0.0" width="116.33333333333334" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kwU-9Z-IjW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bDy-EV-rCi" firstAttribute="trailing" secondItem="kwU-9Z-IjW" secondAttribute="trailing" id="5gP-dw-6Qc"/>
+                            <constraint firstItem="bDy-EV-rCi" firstAttribute="leading" secondItem="kwU-9Z-IjW" secondAttribute="leading" id="Pjs-up-ulD"/>
+                            <constraint firstItem="oc5-P0-m1F" firstAttribute="trailing" secondItem="kwU-9Z-IjW" secondAttribute="trailing" id="R5f-9k-vgr"/>
+                            <constraint firstItem="Hfs-P2-apO" firstAttribute="top" secondItem="bDy-EV-rCi" secondAttribute="bottom" constant="40" id="d49-7d-rHt"/>
+                            <constraint firstItem="Hfs-P2-apO" firstAttribute="leading" secondItem="kwU-9Z-IjW" secondAttribute="leading" constant="20" id="gtx-RB-tR7"/>
+                            <constraint firstItem="oc5-P0-m1F" firstAttribute="top" secondItem="kwU-9Z-IjW" secondAttribute="top" id="rBS-hj-rm4"/>
+                            <constraint firstItem="kwU-9Z-IjW" firstAttribute="trailing" secondItem="Hfs-P2-apO" secondAttribute="trailing" constant="20" id="rHf-JE-TRf"/>
+                            <constraint firstItem="oc5-P0-m1F" firstAttribute="leading" secondItem="kwU-9Z-IjW" secondAttribute="leading" id="sli-55-1sX"/>
+                            <constraint firstItem="bDy-EV-rCi" firstAttribute="top" secondItem="oc5-P0-m1F" secondAttribute="bottom" constant="40" id="xUp-rC-tPq"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="keywordTextField" destination="uH8-5k-xYc" id="op1-hO-RZQ"/>
                         <outlet property="timePicker" destination="bDy-EV-rCi" id="5aZ-Yk-BIH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N44-t9-H8b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="265" y="101"/>
+            <point key="canvasLocation" x="264.8854961832061" y="100.70422535211269"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K9J-ho-154">
             <objects>
                 <navigationController id="9bM-jV-WN1" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="gp2-a6-KdL">
-                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="104.33333333333334"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

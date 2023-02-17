@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import UserNotifications
 
+
 class AlarmListViewController : UITableViewController {
     var alarms : [Alarm] = []
     let userNotificationCenter = UNUserNotificationCenter.current()
@@ -28,11 +29,10 @@ class AlarmListViewController : UITableViewController {
     @IBAction func tapAddAlarmButton(_ sender: UIBarButtonItem) {
         guard let addAlertVC = storyboard?.instantiateViewController(identifier: "AddAlarmViewController") as? AddAlarmViewController else {return}
         
-        addAlertVC.pickedTime = { [weak self] date in
+        addAlertVC.pickedTime = { [weak self] date, keyword in
             guard let self = self else {return}
-            
             var alarmList = self.alarmList()
-            let newAlarm = Alarm(date: date, isOn: true)
+            let newAlarm = Alarm(date: date, isOn: true, keyword: keyword)
             
             alarmList.append(newAlarm)
             alarmList.sort{$0.date<$1.date}
@@ -40,8 +40,10 @@ class AlarmListViewController : UITableViewController {
             self.alarms = alarmList
             
             UserDefaults.standard.set(try? PropertyListEncoder().encode(self.alarms), forKey: "alarms")
-            self.userNotificationCenter.addNotificationRequest(by: newAlarm)
             
+            
+            self.userNotificationCenter.addNotificationRequest(by: newAlarm)
+
             self.tableView.reloadData()
         }
         self.present(addAlertVC, animated: true)
@@ -53,6 +55,7 @@ class AlarmListViewController : UITableViewController {
               let alarms = try? PropertyListDecoder().decode([Alarm].self, from: data) else {return []}
         return alarms
     }
+    
 }
 
 extension AlarmListViewController {
@@ -63,7 +66,7 @@ extension AlarmListViewController {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "원하는 시간에 음악을 추천받아 보세요!"
+            return "원하는 시간에 책을 추천받아 보세요!"
         default:
             return nil
         }

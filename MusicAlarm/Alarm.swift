@@ -11,6 +11,7 @@ struct Alarm : Codable {
     var id : String = UUID().uuidString
     var date : Date
     var isOn : Bool
+    var keyword : String
     
     var time : String {
         let timeFormatter = DateFormatter()
