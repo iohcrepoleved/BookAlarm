@@ -45,11 +45,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate : UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        print(notification.request.content.userInfo["link"] ?? "")
+        
+        
+        print("willpresent")
         completionHandler([.banner, .list, .badge, .sound])
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        let pushUrl = response.notification.request.content.userInfo["link"] as? String
+        if pushUrl !=  nil {
+            NSLog("앱델레케이트 푸시타고 들어옴, 링크있음")
+            if UIApplication.shared.applicationState == .active {
+                NSLog("포그라운드에서 클릭")
+                showMainViewController(pushUrl ?? "")
+            }else if UIApplication.shared.applicationState == .background || UIApplication.shared.applicationState == .inactive {
+                NSLog("백그라운드에서 클릭")
+                // * Push에서 전달받은 UserInfo 데이터를 변수에 담습니다.
+                let userInfo = response.notification.request.content.userInfo
+
+                // * UserDefaults에 URL 정보를 저장합니다.
+                //    - PUSH_URL 이름의 키로 userInfo 안 link 데이터를 저장합니다.
+                let userDefault = UserDefaults.standard
+                userDefault.set(userInfo["link"] ?? "", forKey: "PUSH_URL")
+                userDefault.synchronize()
+                showMainViewController(userDefault.string(forKey: "PUSH_URL") ?? "")
+            }
+        }
         completionHandler()
+    }
+    private func showMainViewController(_ url : String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let webViewController = storyboard.instantiateViewController(identifier: "WebViewController") as? WebViewController else {return}
+        webViewController.url = url
+        webViewController.modalPresentationStyle = .popover
+        UIApplication.shared.windows.first?.rootViewController?.show(webViewController, sender: nil)
     }
 }
 

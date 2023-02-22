@@ -12,6 +12,8 @@
 		9AB9C752299CA46A008C033B /* AlarmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AB9C750299CA46A008C033B /* AlarmTableViewCell.xib */; };
 		9AB9C754299CAD31008C033B /* UNNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9C753299CAD31008C033B /* UNNotificationCenter.swift */; };
 		9AB9C756299E2941008C033B /* BookInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9C755299E2941008C033B /* BookInformation.swift */; };
+		9AB9C75929A37A22008C033B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB9C75829A37A22008C033B /* WebKit.framework */; };
+		9AB9C75B29A37A33008C033B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9C75A29A37A33008C033B /* WebViewController.swift */; };
 		9AF8ECA8299C8C95008F6E52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF8ECA7299C8C95008F6E52 /* AppDelegate.swift */; };
 		9AF8ECAA299C8C95008F6E52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF8ECA9299C8C95008F6E52 /* SceneDelegate.swift */; };
 		9AF8ECAF299C8C95008F6E52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AF8ECAD299C8C95008F6E52 /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 		9AB9C750299CA46A008C033B /* AlarmTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmTableViewCell.xib; sourceTree = "<group>"; };
 		9AB9C753299CAD31008C033B /* UNNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNNotificationCenter.swift; sourceTree = "<group>"; };
 		9AB9C755299E2941008C033B /* BookInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInformation.swift; sourceTree = "<group>"; };
+		9AB9C75829A37A22008C033B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		9AB9C75A29A37A33008C033B /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		9AF8ECA4299C8C95008F6E52 /* MusicAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF8ECA7299C8C95008F6E52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AF8ECA9299C8C95008F6E52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,17 +47,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AB9C75929A37A22008C033B /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9AB9C75729A37A22008C033B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AB9C75829A37A22008C033B /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9AF8EC9B299C8C95008F6E52 = {
 			isa = PBXGroup;
 			children = (
 				9AF8ECA6299C8C95008F6E52 /* MusicAlarm */,
 				9AF8ECA5299C8C95008F6E52 /* Products */,
+				9AB9C75729A37A22008C033B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +94,7 @@
 				9AB9C74F299CA46A008C033B /* AlarmTableViewCell.swift */,
 				9AB9C750299CA46A008C033B /* AlarmTableViewCell.xib */,
 				9AB9C753299CAD31008C033B /* UNNotificationCenter.swift */,
+				9AB9C75A29A37A33008C033B /* WebViewController.swift */,
 				9AB9C755299E2941008C033B /* BookInformation.swift */,
 			);
 			path = MusicAlarm;
@@ -158,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AF8ECBE299C9A5A008F6E52 /* AddAlarmViewController.swift in Sources */,
+				9AB9C75B29A37A33008C033B /* WebViewController.swift in Sources */,
 				9AB9C756299E2941008C033B /* BookInformation.swift in Sources */,
 				9AF8ECA8299C8C95008F6E52 /* AppDelegate.swift in Sources */,
 				9AB9C74A299C9ED5008C033B /* Alarm.swift in Sources */,
