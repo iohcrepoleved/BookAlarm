@@ -16,13 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let vc = (scene as? UIWindowScene) else { return }
-//        if let windowScene = scene as? UIWindowScene {
-//                   self.window = UIWindow(windowScene: windowScene)
-//            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AlarmListViewController")
-//                   self.window!.rootViewController = vc
-//                   self.window!.makeKeyAndVisible()
-//               }
+        guard let _ = (scene as? UIWindowScene) else { return }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -35,6 +29,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        // 앱 실행 시 badge 알림 0으로 사라지게 함
+        UIApplication.shared.applicationIconBadgeNumber = 0
     }
 
     func sceneWillResignActive(_ scene: UIScene) {

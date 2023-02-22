@@ -31,7 +31,7 @@
 		9AB9C755299E2941008C033B /* BookInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInformation.swift; sourceTree = "<group>"; };
 		9AB9C75829A37A22008C033B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		9AB9C75A29A37A33008C033B /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		9AF8ECA4299C8C95008F6E52 /* MusicAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AF8ECA4299C8C95008F6E52 /* BookAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF8ECA7299C8C95008F6E52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AF8ECA9299C8C95008F6E52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9AF8ECAE299C8C95008F6E52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		9AF8EC9B299C8C95008F6E52 = {
 			isa = PBXGroup;
 			children = (
-				9AF8ECA6299C8C95008F6E52 /* MusicAlarm */,
+				9AF8ECA6299C8C95008F6E52 /* BookAlarm */,
 				9AF8ECA5299C8C95008F6E52 /* Products */,
 				9AB9C75729A37A22008C033B /* Frameworks */,
 			);
@@ -74,12 +74,12 @@
 		9AF8ECA5299C8C95008F6E52 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AF8ECA4299C8C95008F6E52 /* MusicAlarm.app */,
+				9AF8ECA4299C8C95008F6E52 /* BookAlarm.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9AF8ECA6299C8C95008F6E52 /* MusicAlarm */ = {
+		9AF8ECA6299C8C95008F6E52 /* BookAlarm */ = {
 			isa = PBXGroup;
 			children = (
 				9AB9C749299C9ED5008C033B /* Alarm.swift */,
@@ -97,15 +97,15 @@
 				9AB9C75A29A37A33008C033B /* WebViewController.swift */,
 				9AB9C755299E2941008C033B /* BookInformation.swift */,
 			);
-			path = MusicAlarm;
+			path = BookAlarm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9AF8ECA3299C8C95008F6E52 /* MusicAlarm */ = {
+		9AF8ECA3299C8C95008F6E52 /* BookAlarm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9AF8ECB8299C8C96008F6E52 /* Build configuration list for PBXNativeTarget "MusicAlarm" */;
+			buildConfigurationList = 9AF8ECB8299C8C96008F6E52 /* Build configuration list for PBXNativeTarget "BookAlarm" */;
 			buildPhases = (
 				9AF8ECA0299C8C95008F6E52 /* Sources */,
 				9AF8ECA1299C8C95008F6E52 /* Frameworks */,
@@ -115,9 +115,9 @@
 			);
 			dependencies = (
 			);
-			name = MusicAlarm;
+			name = BookAlarm;
 			productName = MusicAlarm;
-			productReference = 9AF8ECA4299C8C95008F6E52 /* MusicAlarm.app */;
+			productReference = 9AF8ECA4299C8C95008F6E52 /* BookAlarm.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -135,7 +135,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9AF8EC9F299C8C95008F6E52 /* Build configuration list for PBXProject "MusicAlarm" */;
+			buildConfigurationList = 9AF8EC9F299C8C95008F6E52 /* Build configuration list for PBXProject "BookAlarm" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -148,7 +148,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9AF8ECA3299C8C95008F6E52 /* MusicAlarm */,
+				9AF8ECA3299C8C95008F6E52 /* BookAlarm */,
 			);
 		};
 /* End PBXProject section */
@@ -328,7 +328,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MusicAlarm/Info.plist;
+				INFOPLIST_FILE = BookAlarm/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -339,7 +339,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = helloworld.MusicAlarm;
+				PRODUCT_BUNDLE_IDENTIFIER = helloworld.BookAlarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -355,7 +355,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MusicAlarm/Info.plist;
+				INFOPLIST_FILE = BookAlarm/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -366,7 +366,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = helloworld.MusicAlarm;
+				PRODUCT_BUNDLE_IDENTIFIER = helloworld.BookAlarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -377,7 +377,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9AF8EC9F299C8C95008F6E52 /* Build configuration list for PBXProject "MusicAlarm" */ = {
+		9AF8EC9F299C8C95008F6E52 /* Build configuration list for PBXProject "BookAlarm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AF8ECB6299C8C96008F6E52 /* Debug */,
@@ -386,7 +386,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AF8ECB8299C8C96008F6E52 /* Build configuration list for PBXNativeTarget "MusicAlarm" */ = {
+		9AF8ECB8299C8C96008F6E52 /* Build configuration list for PBXNativeTarget "BookAlarm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AF8ECB9299C8C96008F6E52 /* Debug */,
