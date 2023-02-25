@@ -10,7 +10,7 @@ import UIKit
 import UserNotifications
 
 
-class AlarmListViewController : UITableViewController {
+class AlarmListViewController : UITableViewController, EditAlarmViewDelegate {
     var alarms : [Alarm] = []
     let userNotificationCenter = UNUserNotificationCenter.current()
     
@@ -56,7 +56,13 @@ class AlarmListViewController : UITableViewController {
         return alarms
     }
     
-    
+    func didDelete(indexPath: IndexPath) {
+        print("!!!!!!!!!!!")
+        self.alarms.remove(at: indexPath.row)
+        UserDefaults.standard.set(try? PropertyListEncoder().encode(self.alarms), forKey: "alarms")
+        
+        self.tableView.reloadData()
+    }
 }
 
 extension AlarmListViewController {
@@ -106,4 +112,40 @@ extension AlarmListViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let editViewController = self.storyboard?.instantiateViewController(identifier: "EditAlarmViewController") as? EditAlarmViewController else {return}
+        editViewController.delegate = self
+        let alarm = self.alarms[indexPath.row]
+        editViewController.alarm = alarm
+        editViewController.indexPath = indexPath
+        
+        editViewController.pickedTime = { [weak self] date, keyword in
+            guard let self = self else {return}
+            
+            self.alarms.remove(at: indexPath.row)
+            UserDefaults.standard.set(try? PropertyListEncoder().encode(self.alarms), forKey: "alarms")
+            
+            var alarmList = self.alarmList()
+            let newAlarm = Alarm(date: date, isOn: true, keyword: keyword)
+            
+            alarmList.append(newAlarm)
+            alarmList.sort{$0.date<$1.date}
+            
+            self.alarms = alarmList
+            
+            UserDefaults.standard.set(try? PropertyListEncoder().encode(self.alarms), forKey: "alarms")
+            
+            
+            self.userNotificationCenter.addNotificationRequest(by: newAlarm)
+
+            self.tableView.reloadData()
+        }
+        self.present(editViewController, animated: true)
+    }
+    
+}
+
+
+protocol EditAlarmViewDelegate : AnyObject {
+    func didDelete (indexPath: IndexPath)
 }
