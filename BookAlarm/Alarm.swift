@@ -12,6 +12,8 @@ struct Alarm : Codable {
     var date : Date
     var isOn : Bool
     var keyword : String
+    var orderCondition : String
+    var searchCondition : String
     
     var time : String {
         let timeFormatter = DateFormatter()

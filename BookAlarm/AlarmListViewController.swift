@@ -29,10 +29,14 @@ class AlarmListViewController : UITableViewController, EditAlarmViewDelegate {
     @IBAction func tapAddAlarmButton(_ sender: UIBarButtonItem) {
         guard let addAlertVC = storyboard?.instantiateViewController(identifier: "AddAlarmViewController") as? AddAlarmViewController else {return}
         
-        addAlertVC.pickedTime = { [weak self] date, keyword in
+        addAlertVC.pickedTime = { [weak self] date, keyword, orderCondition, searchCondition in
             guard let self = self else {return}
             var alarmList = self.alarmList()
-            let newAlarm = Alarm(date: date, isOn: true, keyword: keyword)
+            let newAlarm = Alarm(date: date,
+                                 isOn: true,
+                                 keyword: keyword,
+                                 orderCondition: orderCondition,
+                                 searchCondition: searchCondition)
             
             alarmList.append(newAlarm)
             alarmList.sort{$0.date<$1.date}
@@ -57,7 +61,6 @@ class AlarmListViewController : UITableViewController, EditAlarmViewDelegate {
     }
     
     func didDelete(indexPath: IndexPath) {
-        print("!!!!!!!!!!!")
         self.alarms.remove(at: indexPath.row)
         UserDefaults.standard.set(try? PropertyListEncoder().encode(self.alarms), forKey: "alarms")
         
@@ -119,14 +122,18 @@ extension AlarmListViewController {
         editViewController.alarm = alarm
         editViewController.indexPath = indexPath
         
-        editViewController.pickedTime = { [weak self] date, keyword in
+        editViewController.pickedTime = { [weak self] date, keyword, orderCondition, searchCondition in
             guard let self = self else {return}
             
             self.alarms.remove(at: indexPath.row)
             UserDefaults.standard.set(try? PropertyListEncoder().encode(self.alarms), forKey: "alarms")
             
             var alarmList = self.alarmList()
-            let newAlarm = Alarm(date: date, isOn: true, keyword: keyword)
+            let newAlarm = Alarm(date: date,
+                                 isOn: true,
+                                 keyword: keyword,
+                                 orderCondition: orderCondition,
+                                 searchCondition: searchCondition)
             
             alarmList.append(newAlarm)
             alarmList.sort{$0.date<$1.date}
