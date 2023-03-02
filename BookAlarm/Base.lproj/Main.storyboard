@@ -52,7 +52,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oc5-P0-m1F">
-                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <rect key="frame" x="0.0" y="59" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="알람 추가" id="Sr8-mU-215">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="5II-pv-tjE">
@@ -69,16 +69,16 @@
                                 </items>
                             </navigationBar>
                             <datePicker contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="bDy-EV-rCi">
-                                <rect key="frame" x="0.0" y="143" width="393" height="216"/>
+                                <rect key="frame" x="0.0" y="143" width="320" height="216"/>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Hfs-P2-apO">
-                                <rect key="frame" x="30" y="399" width="333" height="119.33333333333337"/>
+                                <rect key="frame" x="30" y="399" width="260" height="119.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AFx-mp-jcs">
-                                        <rect key="frame" x="10" y="7.9999999999999982" width="313" height="25.333333333333329"/>
+                                        <rect key="frame" x="10" y="7.9999999999999982" width="240" height="25.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="키워드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJz-P3-xtH">
-                                                <rect key="frame" x="0.0" y="0.0" width="156.66666666666666" height="25.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="25.333333333333332"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="KVu-Ge-5sF"/>
                                                 </constraints>
@@ -87,7 +87,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uH8-5k-xYc">
-                                                <rect key="frame" x="156.66666666666663" y="0.0" width="156.33333333333337" height="25.333333333333332"/>
+                                                <rect key="frame" x="120" y="0.0" width="120" height="25.333333333333332"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="2yX-L9-meE"/>
                                                 </constraints>
@@ -100,10 +100,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uWR-e8-Xcg">
-                                        <rect key="frame" x="10" y="48.333333333333314" width="313" height="24"/>
+                                        <rect key="frame" x="10" y="48.333333333333314" width="240" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색 조건" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZe-9A-zHC">
-                                                <rect key="frame" x="0.0" y="0.0" width="233" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="E46-3O-ELE"/>
                                                 </constraints>
@@ -112,7 +112,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7rC-Rw-EKU">
-                                                <rect key="frame" x="233" y="0.0" width="80" height="24"/>
+                                                <rect key="frame" x="160" y="0.0" width="80" height="24"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="iRq-aY-DD8"/>
@@ -124,10 +124,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="IfI-c9-L4h">
-                                        <rect key="frame" x="10" y="87.333333333333314" width="313" height="24"/>
+                                        <rect key="frame" x="10" y="87.333333333333314" width="240" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추천 정렬 조건" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcy-3m-hkq">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="113" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="0zz-1c-3TH"/>
                                                 </constraints>
@@ -136,7 +136,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bTb-d2-aFj">
-                                                <rect key="frame" x="233" y="0.0" width="80" height="24"/>
+                                                <rect key="frame" x="160" y="0.0" width="80" height="24"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="Jy0-En-HAq"/>
@@ -193,106 +193,6 @@
             </objects>
             <point key="canvasLocation" x="319.84732824427482" y="-18.30985915492958"/>
         </scene>
-        <!--검색 조건-->
-        <scene sceneID="mcV-55-ucF">
-            <objects>
-                <tableViewController id="Zgo-s1-xGI" customClass="SearchConditionViewController" customModule="BookAlarm" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="D48-QL-5RZ">
-                        <rect key="frame" x="0.0" y="0.0" width="353" height="500"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <sections>
-                            <tableViewSection id="3UB-ZO-5hI">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="pb9-jC-ZpR">
-                                        <rect key="frame" x="0.0" y="50" width="353" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pb9-jC-ZpR" id="xlt-Al-yw9">
-                                            <rect key="frame" x="0.0" y="0.0" width="309" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="책 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waE-0o-c0g">
-                                                    <rect key="frame" x="31" y="11" width="49" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="7cH-1U-EmW">
-                                        <rect key="frame" x="0.0" y="93.666667938232422" width="353" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7cH-1U-EmW" id="pVy-sx-MhG">
-                                            <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="출판사" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VrA-xY-8H2">
-                                                    <rect key="frame" x="31" y="11" width="45" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="TMg-ab-oDG">
-                                        <rect key="frame" x="0.0" y="137.33333587646484" width="353" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TMg-ab-oDG" id="CVw-YJ-mqC">
-                                            <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="저자명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jW-ya-z4N">
-                                                    <rect key="frame" x="31" y="11" width="45" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="q6y-Rp-zbH">
-                                        <rect key="frame" x="0.0" y="181.00000381469727" width="353" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q6y-Rp-zbH" id="9WM-8V-mTd">
-                                            <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="책 소개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viQ-7I-Cb8">
-                                                    <rect key="frame" x="31" y="11" width="49" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="Zgo-s1-xGI" id="LQU-E9-6ZZ"/>
-                            <outlet property="delegate" destination="Zgo-s1-xGI" id="pxg-C4-eQ0"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="검색 조건" id="28K-gI-gop">
-                        <barButtonItem key="leftBarButtonItem" title="〈 뒤로" id="4It-Sc-0Ds">
-                            <connections>
-                                <action selector="tapBackButton:" destination="Zgo-s1-xGI" id="ltb-B1-96u"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <size key="freeformSize" width="353" height="500"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QEA-ts-Vvz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2054.1984732824426" y="-143.66197183098592"/>
-        </scene>
         <!--Edit Alarm View Controller-->
         <scene sceneID="vtZ-hw-uBJ">
             <objects>
@@ -302,7 +202,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UI2-Gc-jCD">
-                                <rect key="frame" x="0.0" y="59" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                                 <items>
                                     <navigationItem title="알람 편집" id="9Xf-fg-Fqb">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="Y8o-s3-kJD">
@@ -319,16 +219,16 @@
                                 </items>
                             </navigationBar>
                             <datePicker contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="iND-h9-jFV">
-                                <rect key="frame" x="0.0" y="143" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="143" width="393" height="216"/>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0IH-Wk-ql0">
-                                <rect key="frame" x="30" y="399" width="260" height="129.33333333333337"/>
+                                <rect key="frame" x="30" y="399" width="333" height="129.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Kx5-ti-jZc">
-                                        <rect key="frame" x="10" y="8" width="240" height="34"/>
+                                        <rect key="frame" x="10" y="8" width="313" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="키워드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bh1-nz-O6K">
-                                                <rect key="frame" x="0.0" y="0.0" width="120" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="156.66666666666666" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="zpy-Dj-gSZ"/>
                                                 </constraints>
@@ -337,17 +237,17 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UnC-2Z-dAQ">
-                                                <rect key="frame" x="120" y="0.0" width="120" height="34"/>
+                                                <rect key="frame" x="156.66666666666663" y="0.0" width="156.33333333333337" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ES4-23-wQ6">
-                                        <rect key="frame" x="10" y="57.666666666666686" width="240" height="24"/>
+                                        <rect key="frame" x="10" y="57.666666666666686" width="313" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색 조건" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PH6-ed-7eG">
-                                                <rect key="frame" x="0.0" y="0.0" width="160" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="233" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="dTD-tj-4cR"/>
                                                 </constraints>
@@ -356,7 +256,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pWh-2c-IBg">
-                                                <rect key="frame" x="160" y="0.0" width="80" height="24"/>
+                                                <rect key="frame" x="233" y="0.0" width="80" height="24"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="9Ug-NU-Q3L"/>
@@ -368,10 +268,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="nBr-nB-DKJ">
-                                        <rect key="frame" x="10" y="97.333333333333314" width="240" height="24"/>
+                                        <rect key="frame" x="10" y="97.333333333333314" width="313" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추천 정렬 조건" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k89-Lf-Ykh">
-                                                <rect key="frame" x="0.0" y="0.0" width="113" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="bIo-wV-U1J"/>
                                                 </constraints>
@@ -380,7 +280,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dPb-DC-5Qq">
-                                                <rect key="frame" x="160" y="0.0" width="80" height="24"/>
+                                                <rect key="frame" x="233" y="0.0" width="80" height="24"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="tTJ-Nc-xGb"/>
@@ -410,10 +310,10 @@
                                 </userDefinedRuntimeAttributes>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="v4d-in-G1Y">
-                                <rect key="frame" x="60" y="539" width="200" height="40"/>
+                                <rect key="frame" x="96.666666666666686" y="539" width="200" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvN-fI-7CV">
-                                        <rect key="frame" x="51.333333333333321" y="8" width="97.666666666666686" height="24"/>
+                                        <rect key="frame" x="50.999999999999979" y="8" width="97.666666666666686" height="24"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="알람 삭제">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
@@ -505,7 +405,7 @@
             <objects>
                 <navigationController id="9bM-jV-WN1" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="gp2-a6-KdL">
-                        <rect key="frame" x="0.0" y="59" width="393" height="104.33333333333334"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
